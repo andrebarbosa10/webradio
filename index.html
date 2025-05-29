@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minha Web Rádio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #1a1a1a;
+      color: white;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+    }
+
+    main {
+      padding-top: 100px;
+      text-align: center;
+    }
+
+    audio {
+      width: 300px;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .player-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">🎵 Minha Web Rádio</div>
+    <div class="player-container">
+      <audio id="radioPlayer" controls>
+        <source src="https://stream.zeno.fm/xxxxxxxxxxxx" type="audio/mpeg" />
+        Seu navegador não suporta áudio HTML5.
+      </audio>
+    </div>
+  </header>
+
+  <main>
+    <h1>Bem-vindo à nossa rádio online!</h1>
+    <p>A melhor seleção de músicas ao vivo para você curtir.</p>
+  </main>
+
+  <script>
+    // Você pode adicionar funções JS adicionais aqui
+    const player = document.getElementById('radioPlayer');
+
+    // Tocar automaticamente (alguns navegadores bloqueiam isso)
+    // player.play().catch(err => console.log('Auto-play bloqueado:', err));
+  </script>
+</body>
+</html>
