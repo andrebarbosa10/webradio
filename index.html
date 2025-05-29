@@ -25,7 +25,7 @@
     }
 
     main {
-      padding-top: 100px;
+      padding-top: 120px;
       text-align: center;
     }
 
@@ -43,17 +43,59 @@
       align-items: center;
       gap: 10px;
     }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00ccff;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 1.2em;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
 
   <header>
     <div class="logo">🎵 Minha Web Rádio</div>
+    
+    <div class="nav-links">
+      <a href="#">Início</a>
+      <a href="#">Programação</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </div>
+
     <div class="player-container">
       <audio id="radioPlayer" controls>
         <source src="https://stream.zeno.fm/xxxxxxxxxxxx" type="audio/mpeg" />
         Seu navegador não suporta áudio HTML5.
       </audio>
+    </div>
+
+    <div class="social-icons">
+      <a href="#" target="_blank">📘</a>
+      <a href="#" target="_blank">📷</a>
+      <a href="#" target="_blank">▶️</a>
     </div>
   </header>
 
@@ -63,10 +105,7 @@
   </main>
 
   <script>
-    // Você pode adicionar funções JS adicionais aqui
     const player = document.getElementById('radioPlayer');
-
-    // Tocar automaticamente (alguns navegadores bloqueiam isso)
     // player.play().catch(err => console.log('Auto-play bloqueado:', err));
   </script>
 </body>
