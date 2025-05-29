@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Minha Web Rádio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    header, .nav-links a, .social-icons a { background: #1a1a1a; color: white; }
+    header { padding: 15px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: fixed; top: 0; width: 100%; z-index: 1000; }
+    .nav-links a { margin: 0 10px; text-decoration: none; }
+    .nav-links a:hover, .social-icons a:hover { color: #00ccff; }
+    .social-icons a { margin-left: 10px; font-size: 1.2em; }
+    main { padding-top: 100px; text-align: center; max-width: 600px; margin: auto; }
+    form { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
+    input, textarea { padding: 10px; font-size: 1em; border: 1px solid #ccc; border-radius: 5px; }
+    button { background-color: #00ccff; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background-color: #009ecf; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">🎵 Minha Web Rádio</div>
+    <nav class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="programacao.html">Programação</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </header>
+
+  <main>
+    <h1>Fale Conosco</h1>
+    <p>Entre em contato conosco usando o formulário abaixo:</p>
+    <form>
+      <input type="text" name="nome" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+      <textarea name="mensagem" rows="5" placeholder="Digite sua mensagem..." required></textarea>
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+  </main>
+</body>
+</html>
