@@ -409,6 +409,9 @@
   <header>
     <div class="logo">🎵 Minha Web Rádio</div>
     <nav class="nav-links" aria-label="Menu principal">
+<div id="ouvintes" style="font-size:1.2em; margin-bottom: 20px; color: #0f0;">
+  👥 Ouvintes online: <span id="ouvintes-count">...</span>
+</div>
       <a href="#programacao">Programação</a>
       <a href="#chat">Mural</a>
       <a href="#contato">Contato</a>
@@ -471,6 +474,7 @@
         <button type="submit" aria-label="Enviar recado">Enviar</button>
       </form>
     </section>
+
 
     <section id="contato" aria-label="Contato e redes sociais">
       <h2>Contato</h2>
@@ -597,5 +601,15 @@
     shareTwitter.href = `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`;
 
   </script>
+<script>
+  function atualizarOuvintesSimulado() {
+    const count = Math.floor(Math.random() * 50) + 5; // Simula de 5 a 55 ouvintes
+    document.getElementById('ouvintes-count').textContent = count;
+  }
+
+  atualizarOuvintesSimulado();
+  setInterval(atualizarOuvintesSimulado, 10000); // Atualiza a cada 10 segundos
+</script>
+
 </body>
 </html>
